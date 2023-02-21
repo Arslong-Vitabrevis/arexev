@@ -1,7 +1,7 @@
 #[derive(Debug, PartialEq, Clone)]
 pub enum Token {
     Add,
-    Substract,
+    Subtract,
     Multiply,
     Divide,
     Caret,
@@ -25,7 +25,7 @@ impl Token {
         use self::OperPrec::*;
         use self::Token::*;
         match *self {
-            Add | Substract => AddSub,
+            Add | Subtract => AddSub,
             Multiply | Divide => MulDiv,
             Caret => Power,
             _ => DefaultZero,
